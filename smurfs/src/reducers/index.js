@@ -16,7 +16,6 @@ export const reducer = (state=initialState, action) => {
                 ...state
             }
         case GET_SMURF_SUCCESS: 
-        console.log(action.payload, 'payload landed')
         return {
             smurfs: action.payload,
             isFetching: false,

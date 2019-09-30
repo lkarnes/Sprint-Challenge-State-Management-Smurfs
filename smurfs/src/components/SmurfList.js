@@ -1,17 +1,24 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
-import {getSmurf,addSmurf} from '../actions';
+import {getSmurf} from '../actions';
 
 
-const SmurfList = ({smurfs, getSmurf, addSmurf}) => {
+const SmurfList = ({smurfs, getSmurf}) => {
     useEffect(()=>{
         getSmurf();
-        console.log(smurfs, 'in useEffect')
-    }, [getSmurf, addSmurf]);
+    }, [getSmurf]);
     return(
         <>
         {smurfs.map(smurf => {
-            return <h1>{smurf.name}</h1>
+            return(
+                <div>
+                    <h1>{smurf.name}</h1>
+                    <p>height: {smurf.height}</p>
+                    <p>age: {smurf.age}</p>
+                    <p>id: {smurf.id}</p>
+                </div>
+                
+            ) 
             
         })}
         </>

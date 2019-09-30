@@ -10,8 +10,9 @@ class App extends Component {
         <h1>SMURFS! 2.0 W/ Redux</h1>
         <div>Welcome to your state management version of Smurfs!</div>
         <div>Start inside of your `src/index.js` file!</div>
-        <SmurfForm/>
         <div>Have fun!</div>
+        <SmurfForm/>
+        
         <SmurfList/>
       </div>
     );

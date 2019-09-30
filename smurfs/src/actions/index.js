@@ -4,11 +4,9 @@ export const GET_SMURF_SUCCESS = 'GET_SMURF_SUCCESS'
 export const GET_SMURFS_ERROR = 'GET_SMURFS_ERROR'
 
 export const getSmurf = () => dispatch => {
-    console.log('start')
     dispatch({type: GET_SMURF_START})
     axios.get('http://localhost:3333/smurfs')
     .then(res=>{
-        console.log(res)
         dispatch({type:GET_SMURF_SUCCESS, payload: res.data})
     })
     .catch(err=> {
